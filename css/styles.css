@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: black;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'PT Mono', monospace;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  width: 611px;
+  height: 611px;
+  max-width: 90vw;
+  max-height: 90vw;
+  background-size: contain;
+  background-image: url("../assets/logo.svg?v=0.1");
+  margin-top: max(calc(-20vw), -140px);
+}
+
+.text {
+  text-align: center;
+  margin: 0 24px;
+}
+
+.text .title {
+  font-weight: bold;
+  font-size: clamp(30px, 7vw, 90px);
+}
+
+.text .subtitle {
+  font-size: clamp(12px, 2.8vw, 36px);
+  padding-bottom: 24px;
+}
+
+.text .title .title-tech {
+  color: #B3DADF;
+}
+
+.text .title .title-tech {
+  color: #B3DADF;
+}
