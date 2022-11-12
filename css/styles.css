@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #B3DADF;
+}
+
 html {
   height: 100%;
 }
@@ -33,18 +37,42 @@ body {
 
 .text .title {
   font-weight: bold;
-  font-size: clamp(30px, 7vw, 90px);
+  font-size: clamp(45px, 7vw, 90px);
 }
 
 .text .subtitle {
-  font-size: clamp(12px, 2.8vw, 36px);
+  font-size: clamp(18px, 2.8vw, 36px);
+}
+
+.text .subtitle .emphasis {
+  color: var(--primary-color);
+}
+
+.text .title .title-tech {
+  color: var(--primary-color);
+}
+
+.text .title .title-tech {
+  color: var(--primary-color);
+}
+
+.description {
+  line-height: 1.3em;
+  font-size: clamp(15px, 2.3vw, 30px);
+  margin: 32px 24px 0 24px;
   padding-bottom: 24px;
 }
 
-.text .title .title-tech {
-  color: #B3DADF;
+.description p {
+  margin: 8px 0;
+  padding: 0;
 }
 
-.text .title .title-tech {
-  color: #B3DADF;
+a:link, a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+a:hover, a:active {
+  color: var(--primary-color);
 }
