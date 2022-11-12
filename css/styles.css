@@ -26,7 +26,7 @@ body {
   max-width: 90vw;
   max-height: 90vw;
   background-size: contain;
-  background-image: url("../assets/logo.svg?v=0.1");
+  background-image: url("../assets/logo.svg?v=0.2");
   margin-top: max(calc(-20vw), -140px);
 }
 
@@ -35,13 +35,14 @@ body {
   margin: 30px 24px 0 24px;
 }
 
-.text .title {
-  font-weight: bold;
-  font-size: clamp(45px, 7vw, 90px);
-}
-
 .text .subtitle {
   font-size: clamp(18px, 2.8vw, 36px);
+}
+
+.name {
+  --element-width: min(756px, calc(90vw - 48px));
+  width: var(--element-width);
+  height: calc(var(--element-width) / 756 * 101);
 }
 
 .text .subtitle .emphasis {
