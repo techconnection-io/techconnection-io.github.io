@@ -58,9 +58,10 @@ body {
 
 .description {
   line-height: 1.3em;
-  font-size: clamp(15px, 2.3vw, 30px);
-  margin: 32px 24px 0 24px;
-  padding-bottom: 24px;
+  font-size: clamp(13.5px, 2.1vw, 27px);
+  max-width: 90vh;
+  padding: 0 24px 40px 24px;
+  margin: 32px auto 0 auto;
 }
 
 .description p {
