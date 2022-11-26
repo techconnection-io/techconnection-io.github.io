@@ -18,6 +18,17 @@ body {
   color: white;
 }
 
+.navigation-bar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 16px 8px 16px;
+  background-color: #000000aa;
+  text-align: right;
+  font-size: 22px;
+}
+
 .logo {
   margin: 0 auto;
   display: block;
