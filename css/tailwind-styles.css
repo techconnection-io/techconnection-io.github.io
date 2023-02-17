@@ -1901,8 +1901,8 @@ video {
   background-image: url('../../assets/images/background.jpg');
 }
 
-.bg-\[url\(\'\.\.\/assets\/logo\.svg\'\)\]{
-  background-image: url('../assets/logo.svg');
+.bg-\[url\(\'\.\.\/assets\/logo-cropped\.svg\'\)\]{
+  background-image: url('../assets/logo-cropped.svg');
 }
 
 .decoration-slice{
@@ -2145,6 +2145,11 @@ video {
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold{
@@ -2626,13 +2631,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 }
 
 ::-moz-selection{
-  background-color: rgb(79 70 229 / 0.9);
+  background-color: rgb(40 90 97 / 0.9);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 ::selection{
-  background-color: rgb(79 70 229 / 0.9);
+  background-color: rgb(40 90 97 / 0.9);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -2815,13 +2820,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     padding-bottom: 6rem;
   }
 
+  .md\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
 
-  .md\:text-8xl{
-    font-size: 6rem;
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-7xl{
+    font-size: 4.5rem;
     line-height: 1;
   }
 
@@ -2853,6 +2868,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:text-8xl{
+    font-size: 6rem;
+    line-height: 1;
   }
 
   [dir="ltr"] .ltr\:lg\:ml-5{
