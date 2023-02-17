@@ -13,7 +13,8 @@ module.exports = {
     },
     fontFamily: {
       'nunito': ['"Nunito", sans-serif'],
-      'ptmono': ['"PT-Mono", ui-monospace, monospace'],
+      'ptmono': ['"PT Mono", monospace'],
+      'robotoslab': ['"Roboto Slab", sans-serif'],
     },
     container: {
       center: true,
