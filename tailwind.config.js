@@ -32,6 +32,10 @@ module.exports = {
         'dark': '#3c4858',
         'black': '#161c2d',
         'dark-footer': '#192132',
+        'cute-green': '#B3DADF',
+        'cute-green-darker-base': '##40919C',
+        'cute-green-darker-plus': '#285A61',
+        'cute-green-darker-plus-hover': '#3A848E'
       },
       
       boxShadow: {
