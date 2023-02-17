@@ -1,0 +1,22 @@
+@import "components/buttons.css";
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+    @apply leading-relaxed;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    @apply leading-normal;
+}
+
+::selection {
+    @apply bg-indigo-600/90 text-white;
+}
+

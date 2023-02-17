@@ -1,0 +1,23 @@
+{
+  "name": "latechconnection-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techconnection-io/landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techconnection-io/landing-page/issues"
+  },
+  "homepage": "https://github.com/techconnection-io/landing-page#readme",
+  "devDependencies": {
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.2.6"
+  }
+}
