@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>SwiftUI with John Sundell Training</title>
+    <meta name="description" content="Join John Sundell, creator of Swift by Sundell, for two days full of workshops and training all about SwiftUI. Learn the fundamentals of building apps using Apple’s declarative UI framework, how to architect apps using it, and essential techniques for building robust data flows and state management.">
+    <meta name="author" content="TechConnection.io">
+
+    <meta property="og:title" content="SwiftUI with John Sundell Training">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Join John Sundell, creator of Swift by Sundell, for two days full of workshops and training all about SwiftUI. Learn the fundamentals of building apps using Apple’s declarative UI framework, how to architect apps using it, and essential techniques for building robust data flows and state management.">  
+
+    <!-- Css -->
+    <!-- Main Css -->
+    <link
+      href="assets/libs/@iconscout/unicons/css/line.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/libs/@mdi/font/css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="../../css/tailwind-styles.css" rel="stylesheet" />
+  </head>
+
+  <body
+    class="font-robotoslab text-base text-black dark:text-white dark:bg-slate-900"
+  >
+    <!-- Start Navbar -->
+    <nav id="topnav" class="defaultscroll is-sticky">
+      <div class="container relative">
+        <!-- Logo container-->
+        <a class="logo" href="index.html">
+          <span class="inline-block dark:hidden">
+            <img
+              src="../assets/images/light-bg.svg"
+              class="l-dark"
+              style="height: 48px;"
+              alt=""
+            />
+            <img
+              src="../assets/images/dark-bg.svg"
+              class="l-light"
+              style="height: 48px;"
+              alt=""
+            />
+          </span>
+          <img
+            src="assets/images/logo-light.png"
+            height="24"
+            class="hidden dark:inline-block"
+            alt=""
+          />
+        </a>
+        <!--end navigation-->
+      </div>
+      <!--end container-->
+    </nav>
+    <!--end header-->
+    <!-- End Navbar -->
+
+    <!-- Start Hero -->
+    <section
+      class="relative table w-full py-36 lg:py-44 bg-[url('../training/swiftui-with-john-sundell/assets/images/course/cta.jpg')] bg-no-repeat bg-center bg-cover"
+    >
+      <div class="absolute inset-0 bg-black opacity-75"></div>
+      <div class="container relative">
+        <div class="grid grid-cols-1 pb-8 text-center mt-10">
+          <span
+            class="bg-green-600 text-white text-xs font-bold px-2.5 py-0.5 rounded w-fit mx-auto h-5"
+            >Starting at € 1300</span
+          >
+          <h3 class="mt-3 text-3xl leading-normal font-medium text-white">
+            SwiftUI with John Sundell
+          </h3>
+          <div class="flex items-center mx-auto mt-3">
+            <img
+              src="assets/images/john-sundell.jpg"
+              class="size-10 rounded-full shadow-md dark:shadow-gray-800"
+              alt=""
+            />
+            <a href="" class="font-semibold text-white block ms-3"
+              >John Sundell</a
+            >
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+
+      <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+        <ul class="tracking-[0.5px] mb-0 inline-block">
+          <li class="inline-block items-center mt-2 mx-3">
+            <i class="uil uil-clock text-white"></i>
+            <span class="text-white/60 ms-1">2 Days</span>
+          </li>
+
+          <li class="inline-block items-center mt-2 mx-3">
+            <i class="uil uil-signal text-white"></i>
+            <span class="text-white/60 ms-1">Intermediate Level</span>
+          </li>
+
+          <li class="inline-block items-center mt-2 mx-3">
+            <i class="uil uil-shopping-cart text-white"></i>
+            <a
+              href="https://1.envato.market/techwind"
+              target="_blank"
+              class="text-white"
+              >Get In Touch</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--end section-->
+    <div class="relative">
+      <div
+        class="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden z-1 text-white dark:text-slate-900"
+      >
+        <svg
+          class="w-full h-auto scale-[2.0] origin-top"
+          viewBox="0 0 2880 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Start Section-->
+    <section class="relative md:py-24 py-16 overflow-hidden">
+      <div class="container relative">
+        <div class="grid grid-cols-1">
+          <h5 class="text-2xl font-semibold mb-5">Overview</h5>
+
+          <p class="text-slate-400 mb-3">
+            Join John Sundell, creator of Swift by Sundell, for two days full of
+            workshops and training all about SwiftUI. Learn the fundamentals of
+            building apps using Apple’s declarative UI framework, how to
+            architect apps using it, and essential techniques for building
+            robust data flows and state management.
+          </p>
+          <p class="text-slate-400 mb-3">
+            The goal of this workshop is to prepare you for either writing new
+            apps completely using SwiftUI, or to start adopting SwiftUI within
+            existing UIKit-based iOS code bases. If you enjoy the Swift by
+            Sundell website, podcast and videos — you’ll love these hands-on
+            workshops!
+          </p>
+          <p class="text-slate-400 mb-3">
+            Every SwiftUI update and improvement that will be announced by Apple
+            during WWDC will be included in this training.
+          </p>
+        </div>
+        <!--end grid-->
+
+        <div class="grid grid-cols-1 mt-8">
+          <h5 class="text-2xl font-semibold mb-5">Curriculum</h5>
+
+          <div class="grid md:grid-cols-2 grid-cols-1 pt-6 gap-[30px]">
+            <div>
+              <h5 class="text-lg font-semibold mb-5">Introducing SwiftUI</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> What's
+                          SwiftUI?</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Differences
+                          from previous Apple UI frameworks (UIKit,
+                          CoreAnimation…)</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"><i class="uil uil-lock"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">Components overview</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Built-in
+                          SwiftUI components</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Built-in
+                          SwiftUI views</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">Layout</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> How SwiftUI’s
+                          layout system works</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Layout options
+                          available</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">State management</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Managing state
+                          within a SwiftUI view hierarchy</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> When to use
+                          what layout method?</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">
+                Bridging the gap between SwiftUI and UIKit
+              </h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> How to bring
+                          UIKit-based views into SwiftUI</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> How to bring
+                          SwiftUI-based views into UIKit</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">View architecture</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Architecting
+                          and structuring SwiftUI view implementations</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> When to build
+                          reusable components</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> How to compose
+                          views</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">Data flows</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Building
+                          increasingly sophisticated data flows between views</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Optimizing for
+                          maintainability</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Optimizing for
+                          robustness</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold mb-5">Dependency management</h5>
+
+              <div
+                class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md"
+              >
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Managing
+                          dependencies within a SwiftUI-based app</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4">
+                        <a href="" class=""
+                          ><i class="uil uil-clipboard-alt"></i> Dependency
+                          injection</a
+                        >
+                      </td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- START NEED CUSTOM TRAINING -->
+        <div class="container relative md:mt-24 mt-16">
+          <div class="md:flex justify-center">
+            <div class="lg:w-2/3 text-center">
+              <h3
+                class="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold mb-6"
+              >
+                Need an In-House / Custom Training?
+              </h3>
+
+              <p class="text-slate-400 max-w-xl mx-auto">
+                If you’d like to get a version of this tailored to your needs,
+                in our office or videoconference setup, remotely or anywhere in
+                the world, let us know what your needs are.
+              </p>
+
+              <div class="mt-8">
+                <div class="text-center subcribe-form">
+                  <form class="relative mx-auto max-w-xl">
+                    <input
+                      type="email"
+                      id="subemail"
+                      name="name"
+                      class="py-4 pe-40 ps-6 w-full h-[50px] outline-none text-black dark:text-white rounded-full bg-white/70 dark:bg-slate-900/70 border border-gray-100 dark:border-gray-700"
+                      placeholder="Enter your email id.."
+                    />
+                    <button
+                      type="submit"
+                      class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full"
+                    >
+                      Subcribe Now
+                    </button>
+                  </form>
+                  <!--end form-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END NEED CUSTOM TRAINING -->
+
+        <!--START OVERVIEW-->
+        <div class="grid grid-cols-1 mt-16">
+          <h5 class="text-2xl font-semibold mb-5">Preparing</h5>
+
+          <p class="text-slate-400 mb-3">
+            The training takes place entirely in <strong>English</strong>, so a
+            sufficient spoken understanding of English is mandatory. Trainees
+            must also have <strong>reasonable experience</strong> in developing
+            apps with Swift and developing iOS apps with UIKit, and basic
+            proficiency with Git and command-line tools. We emphasize that this
+            training <strong>is not intended for complete beginners</strong>,
+            but targeted at people with prior professional experience of app
+            development with Swift and on iOS (not necessarily in the same
+            setting).
+          </p>
+          <p class="text-slate-400 mb-3">
+            There is <strong>no pre-requisite for this training</strong> course
+            (as in, verifiably acquired knowledge, through degrees,
+            certifications, tests, etc.).
+          </p>
+        </div>
+        <!--END OVERVIEW-->
+
+        <!--START LOGISTICS-->
+        <div class="grid grid-cols-1 mt-16">
+          <h5 class="text-2xl font-semibold mb-5">Logistics</h5>
+
+          <ul>
+            <li class="text-slate-400 mb-3 list-disc">
+              Every session is held synchronously, <strong>live</strong>,
+              including remote sessions. This training does not rely on
+              pre-recorded videos. We are currently not scheduling new
+              multi-client in-room sessions before, at the earliest, April 1st,
+              2022.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Comprehensive course material is provided, serving as a common
+              thread throughout the training. This typically includes numerous
+              slides and starter codebases or repositories for every exercise
+              and lab.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Trainees can ask questions at any time. Sessions alternate between
+              <strong>theory and hands-on labs</strong>, in short intervals
+              ranging from 5 minutes to 1 hour.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Hands-on periods involve <strong>real-world use-cases</strong>,
+              which can be bootstrapped through starter codebases, Git
+              repositories, or online assignment labs. These periods may be
+              completed individually or in sub-groups that change between
+              sessions to encourage pair programming and collaboration.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Remote sessions are conducted via a Zoom recurring meeting,
+              accessible through a provided link using both the installed app
+              and the web-based, no-install client. Features commonly used
+              include video thumbnails, screensharing, chat, breakout rooms, and
+              potentially quizzes, annotations, and whiteboards.
+            </li>
+          </ul>
+        </div>
+        <!--END LOGISTICS-->
+      </div>
+      <!--end container-->
+
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- End Section-->
+
+    <!-- Footer Start -->
+    <footer
+      class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200"
+    >
+      <div class="container">
+        <div class="col-span-12">
+          <div class="py-16 px-0">
+            <div class="grid lg:grid-cols-12 grid-cols-1 gap-8">
+              <div class="lg:col-span-3">
+                <a href="#" class="text-[22px] focus:outline-none">
+                  <img
+                    src="/assets/images/ltc-logo.png"
+                    class="w-full"
+                    alt="La Tech Connection Logo"
+                  />
+                </a>
+              </div>
+              <!--end col-->
+
+              <div class="lg:col-span-3">
+                <h5 class="text-gray-100 font-semibold">La société</h5>
+                <ul class="list-none mt-4">
+                  <li>
+                    <a
+                      href="https://techconnection.notion.site/Manifeste-Tech-Connection-680741db99ab425996da15860736c7a3"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Manifeste</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://techconnection.notion.site/Tech-Connection-Code-of-Conduct-cc41547d5fc24cb6b5cde5b59419d3d5"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Code of
+                      Conduct</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/ZTechConnection"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b"></i>
+                      <i class="uil uil-twitter pr-1"></i>ZTechConnection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/latechconnection/"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b"></i>
+                      <i class="uil uil-linkedin pr-1"></i>La Tech Connection</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--end col-->
+
+              <div class="lg:col-span-3">
+                <h5 class="text-gray-100 font-semibold">Nos événéments</h5>
+                <ul class="list-none mt-4">
+                  <li>
+                    <a
+                      href="https://swiftconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Swift
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://flutterconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Flutter
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://reactconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>React
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://reactnativeconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>React Native
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.meetup.com/cocoaheads-paris/"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>CocoaHeads
+                      Paris</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.meetup.com/react-native-paris-meetup/"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>React Native
+                      Paris</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--end col-->
+
+              <div class="lg:col-span-3">
+                <h5 class="text-gray-100 font-semibold">
+                  Travailler avec nous
+                </h5>
+                <ul class="list-none mt-4">
+                  <li>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdhecV-QQZcgQWl8byKd5UcA71jkYZNLWabRBNHOMPAeYDNmA/viewform?usp=sf_link"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Sponsoring</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end grid-->
+          </div>
+          <!--end col-->
+        </div>
+      </div>
+      <!--end container-->
+
+      <div class="py-[30px] px-0 border-t border-slate-800">
+        <div class="container text-center">
+          <div class="grid md:grid-cols-2 items-center">
+            <div class="ltr:md:text-left rtl:md:text-right text-center">
+              <p class="mb-0">
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                <span class="italic">La</span> Tech Connection
+              </p>
+            </div>
+          </div>
+          <!--end grid-->
+        </div>
+        <!--end container-->
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </body>
+</html>
