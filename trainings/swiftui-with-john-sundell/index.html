@@ -21,14 +21,9 @@
     <!-- Css -->
     <!-- Main Css -->
     <link
-      href="assets/libs/@iconscout/unicons/css/line.css"
+      href="/assets/libs/@iconscout/unicons/css/line.css"
       type="text/css"
       rel="stylesheet"
-    />
-    <link
-      href="assets/libs/@mdi/font/css/materialdesignicons.min.css"
-      rel="stylesheet"
-      type="text/css"
     />
     <link href="../../css/tailwind-styles.css" rel="stylesheet" />
   </head>
@@ -56,7 +51,7 @@
             />
           </span>
           <img
-            src="assets/images/logo-light.png"
+            src="../assets/images/light-bg.svg"
             height="24"
             class="hidden dark:inline-block"
             alt=""
@@ -71,7 +66,7 @@
 
     <!-- Start Hero -->
     <section
-      class="relative table w-full py-36 lg:py-44 bg-[url('../training/swiftui-with-john-sundell/assets/images/course/cta.jpg')] bg-no-repeat bg-center bg-cover"
+      class="relative table w-full py-36 lg:py-44 bg-[url('../trainings/swiftui-with-john-sundell/assets/images/course/cta.jpg')] bg-no-repeat bg-center bg-cover"
     >
       <div class="absolute inset-0 bg-black opacity-75"></div>
       <div class="container relative">
@@ -113,9 +108,9 @@
           <li class="inline-block items-center mt-2 mx-3">
             <i class="uil uil-shopping-cart text-white"></i>
             <a
-              href="https://1.envato.market/techwind"
+              href="https://airtable.com/appud3cU1ufbvcMWB/pag9HJZrgT7GABCn5/form"
               target="_blank"
-              class="text-white"
+              class="text-white hover:bg-white/30 hover:text-white duration-500 ease-in-out px-2 py-1 rounded"
               >Get In Touch</a
             >
           </li>
@@ -462,21 +457,9 @@
 
               <div class="mt-8">
                 <div class="text-center subcribe-form">
-                  <form class="relative mx-auto max-w-xl">
-                    <input
-                      type="email"
-                      id="subemail"
-                      name="name"
-                      class="py-4 pe-40 ps-6 w-full h-[50px] outline-none text-black dark:text-white rounded-full bg-white/70 dark:bg-slate-900/70 border border-gray-100 dark:border-gray-700"
-                      placeholder="Enter your email id.."
-                    />
-                    <button
-                      type="submit"
-                      class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full"
-                    >
-                      Subcribe Now
-                    </button>
-                  </form>
+                  <div class="mt-6">
+                    <a href="https://airtable.com/appud3cU1ufbvcMWB/pag9HJZrgT7GABCn5/form" class="btn bg-cute-green-darker-plus hover:bg-cute-green-darker-plus-hover border-cute-green-darker-plus hover:border-cute-green-darker-plus-hover text-white rounded-md mt-4"><i class="uil uil-envelope"></i> Get in Touch!</a>
+                  </div>
                   <!--end form-->
                 </div>
               </div>
@@ -552,6 +535,34 @@
           </ul>
         </div>
         <!--END LOGISTICS-->
+
+        <!-- START END CTA -->
+        <div class="container relative md:mt-24 mt-16">
+          <div class="md:flex justify-center">
+            <div class="lg:w-2/3 text-center">
+              <h3
+                class="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold mb-6"
+              >
+                Interested? Book your training now!
+              </h3>
+
+              <p class="text-slate-400 max-w-xl mx-auto">
+                Let us know if you are interested in this training, we will get
+                back to you with more details and the next steps.
+              </p>
+
+              <div class="mt-8">
+                <div class="text-center subcribe-form">
+                  <div class="mt-6">
+                    <a href="https://airtable.com/appud3cU1ufbvcMWB/pag9HJZrgT7GABCn5/form" class="btn bg-cute-green-darker-plus hover:bg-cute-green-darker-plus-hover border-cute-green-darker-plus hover:border-cute-green-darker-plus-hover text-white rounded-md mt-4"><i class="uil uil-envelope"></i> Get in Touch!</a>
+                  </div>
+                  <!--end form-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END END CTA -->
       </div>
       <!--end container-->
 
@@ -723,5 +734,6 @@
       </div>
     </footer>
     <!-- Footer End -->
+    <script src="../assets/js/app.js"></script>
   </body>
 </html>
