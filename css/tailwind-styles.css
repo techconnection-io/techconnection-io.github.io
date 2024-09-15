@@ -2393,6 +2393,10 @@ video {
   background-image: url('../trainings/swiftui-with-john-sundell/assets/images/course/cta.jpg');
 }
 
+.bg-\[url\(\'\.\.\/trainings\/swiftui-with-john-sundell-advanced\/assets\/images\/course\/cta\.jpg\'\)\]{
+  background-image: url('../trainings/swiftui-with-john-sundell-advanced/assets/images/course/cta.jpg');
+}
+
 .bg-cover{
   background-size: cover;
 }
@@ -2779,12 +2783,24 @@ video {
   transition-duration: 150ms;
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200{
   transition-duration: 200ms;
 }
 
 .duration-500{
   transition-duration: 500ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 .ease-in-out{
@@ -2873,6 +2889,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-cute-green-darker-plus:hover{
+  --tw-text-opacity: 1;
+  color: rgb(40 90 97 / var(--tw-text-opacity));
+}
+
+.hover\:text-cute-green-darker-plus-hover:hover{
+  --tw-text-opacity: 1;
+  color: rgb(58 132 142 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline;
 }
 
 .hover\:shadow-lg:hover{
