@@ -9,6 +9,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .link-primary {
+        @apply font-semibold text-cute-green-darker-plus hover:underline hover:text-cute-green-darker-plus-hover transition duration-300 ease-in-out;
+    }
+}
+
 p {
     @apply leading-relaxed;
 }
