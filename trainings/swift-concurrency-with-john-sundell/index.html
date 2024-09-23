@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Swift Concurrency with John Sundell Training</title>
+    <meta
+      name="description"
+      content="Join John Sundell, creator of Swift by Sundell, for two days full of workshops and training all about SwiftUI. Learn the fundamentals of building apps using Apple’s declarative UI framework, how to architect apps using it, and essential techniques for building robust data flows and state management."
+    />
+    <meta name="author" content="TechConnection.io" />
+
+    <meta property="og:title" content="SwiftUI with John Sundell Training" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Join John Sundell, creator of Swift by Sundell, for two days full of workshops and training all about SwiftUI. Learn the fundamentals of building apps using Apple’s declarative UI framework, how to architect apps using it, and essential techniques for building robust data flows and state management."
+    />
+
+    <!-- Css -->
+    <!-- Main Css -->
+    <link
+      href="/assets/libs/@iconscout/unicons/css/line.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="../../css/tailwind-styles.css" rel="stylesheet" />
+  </head>
+
+  <body
+    class="font-robotoslab text-base text-black dark:text-white dark:bg-slate-900"
+  >
+    <!-- Start Navbar -->
+    <nav id="topnav" class="defaultscroll is-sticky">
+      <div class="container relative">
+        <!-- Logo container-->
+        <a class="logo" href="../index.html">
+          <span class="inline-block dark:hidden">
+            <img
+              src="../assets/images/light-bg.svg"
+              class="l-dark"
+              style="height: 48px"
+              alt=""
+            />
+            <img
+              src="../assets/images/dark-bg.svg"
+              class="l-light"
+              style="height: 48px"
+              alt=""
+            />
+          </span>
+          <img
+            src="../assets/images/light-bg.svg"
+            height="24"
+            class="hidden dark:inline-block"
+            alt=""
+          />
+        </a>
+        <!--end navigation-->
+      </div>
+      <!--end container-->
+    </nav>
+    <!--end header-->
+    <!-- End Navbar -->
+
+    <!-- Start Hero -->
+    <section
+      class="relative table w-full py-36 lg:py-44 bg-[url('../trainings/swiftui-with-john-sundell/assets/images/course/cta.jpg')] bg-no-repeat bg-center bg-cover"
+    >
+      <div class="absolute inset-0 bg-black opacity-75"></div>
+      <div class="container relative">
+        <div class="grid grid-cols-1 pb-8 text-center mt-10">
+          <span
+            class="bg-green-600 text-white text-xs font-bold px-2.5 py-0.5 rounded w-fit mx-auto h-5"
+            >Starting at € 700</span
+          >
+          <h3 class="mt-3 text-3xl leading-normal font-medium text-white">
+            Swift Concurrency with John Sundell
+          </h3>
+          <div class="flex items-center mx-auto mt-3">
+            <img
+              src="assets/images/john-sundell.jpg"
+              class="size-10 rounded-full shadow-md dark:shadow-gray-800"
+              alt=""
+            />
+            <a href="" class="font-semibold text-white block ms-3"
+              >John Sundell</a
+            >
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+
+      <div class="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+        <ul class="tracking-[0.5px] mb-0 inline-block">
+          <li class="inline-block items-center mt-2 mx-3">
+            <i class="uil uil-clock text-white"></i>
+            <span class="text-white/60 ms-1">1 Day</span>
+          </li>
+
+          <li class="inline-block items-center mt-2 mx-3">
+            <i class="uil uil-signal text-white"></i>
+            <span class="text-white/60 ms-1">Advanced Level</span>
+          </li>
+
+          <li class="inline-block items-center mt-2 mx-3">
+            <i class="uil uil-shopping-cart text-white"></i>
+            <a
+              target="_blank"
+              href="https://airtable.com/appud3cU1ufbvcMWB/pag9HJZrgT7GABCn5/form"
+              target="_blank"
+              class="text-white hover:bg-white/30 hover:text-white duration-500 ease-in-out px-2 py-1 rounded"
+              >Get In Touch</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--end section-->
+    <div class="relative">
+      <div
+        class="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden z-1 text-white dark:text-slate-900"
+      >
+        <svg
+          class="w-full h-auto scale-[2.0] origin-top"
+          viewBox="0 0 2880 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Start Section-->
+    <section class="relative md:py-24 py-16 overflow-hidden">
+      <div class="container relative">
+        <div class="grid grid-cols-1">
+          <h5 class="text-2xl font-semibold mb-5">Overview</h5>
+          <p class="text-slate-400 mb-3">
+            Join
+            <a class="link-primary" href="https://swiftbysundell.com"
+              >John Sundell</a
+            >, creator of Swift by Sundell, for a one-day workshop all about
+            Swift’s built-in concurrency system. During the training session,
+            you’ll get a comprehensive walkthrough of how to best utilize Swift
+            concurrency within an iOS app — including using async/await, actors,
+            managing tasks, working with async sequences, and more.
+          </p>
+          <p class="text-slate-400 mb-3">
+            We’ll explore a number of different use cases, including networking,
+            data transformations, multi-threading, thread safety, and
+            observation management. You’ll also get familiar with the tools
+            you’ll need to migrate from Swift 5 to 6, including how to resolve
+            actor isolation errors, working with Sendable types and functions,
+            how to refactor existing code to be fully compliant with Swift 6,
+            and how to manage legacy and external code.
+          </p>
+          <p class="text-slate-400 mb-3">
+            If you want to be able to fully utilize Swift concurrency, and
+            future-proof your code base with Swift 6, then this workshop is for
+            you.
+          </p>
+        </div>
+        <!--end grid-->
+
+        <div class="grid grid-cols-1 mt-8">
+          <h5 class="text-2xl font-semibold mb-5">Curriculum</h5>
+        
+          <div class="grid md:grid-cols-2 grid-cols-1 pt-6 gap-[30px]">
+            <div>
+              <h5 class="text-lg font-semibold mb-5">1. Introduction to Swift Concurrency</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How does async/await work?</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How threading works when using Swift concurrency</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Running async tasks and handling errors</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">2. Networking with async/await</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Using URLSession with async/await to make network calls</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Mixing async code with synchronous operations, such as JSON decoding</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Utilizing caching and preventing race conditions</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">3. Structured concurrency</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Using “async let” to run multiple, structured operations in parallel</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Utilizing actors to protect against data races</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">4. Async sequences</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Consuming and constructing async sequences</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How async sequences relate to Combine and reactive programming in general</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">5. Migrating to Swift 6</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Resolving common concurrency and actor isolation errors in Swift 6</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How the Sendable protocol works, and how to conform to it</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> When and how to use the MainActor</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">6. Making existing code async/await compatible</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How to use async/await with existing, closure-based APIs</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How to migrate delegate-based APIs to async/await</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">7. UI integration</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Integrating async/await with UIKit</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> Integrating async/await with SwiftUI</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        
+            <div>
+              <h5 class="text-lg font-semibold mb-5">8. Unit testing</h5>
+              <div class="relative overflow-x-auto block w-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <table class="w-full text-start">
+                  <tbody>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How to unit test async/await-based code</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                    <tr class="border-t border-gray-100 dark:border-gray-700">
+                      <td class="p-4"><i class="uil uil-clipboard-alt"></i> How to unit test actors</td>
+                      <td class="p-4 text-end"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END CURRICULUM -->
+
+        <!-- START NEED CUSTOM TRAINING -->
+        <div class="container relative md:mt-24 mt-16">
+          <div class="md:flex justify-center">
+            <div class="lg:w-2/3 text-center">
+              <h3
+                class="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold mb-6"
+              >
+                Need an In-House / Custom Training?
+              </h3>
+
+              <p class="text-slate-400 max-w-xl mx-auto">
+                If you’d like to get a version of this tailored to your needs,
+                in our office or remotely, let us know what your needs are.
+              </p>
+
+              <div class="mt-8">
+                <div class="text-center subcribe-form">
+                  <div class="mt-6">
+                    <a
+                      target="_blank"
+                      href="https://airtable.com/appud3cU1ufbvcMWB/pag9HJZrgT7GABCn5/form"
+                      class="btn bg-cute-green-darker-plus hover:bg-cute-green-darker-plus-hover border-cute-green-darker-plus hover:border-cute-green-darker-plus-hover text-white rounded-md mt-4"
+                      ><i class="uil uil-envelope"></i> Get in Touch!</a
+                    >
+                  </div>
+                  <!--end form-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END NEED CUSTOM TRAINING -->
+
+        <!--START OVERVIEW-->
+        <div class="grid grid-cols-1 mt-16">
+          <h5 class="text-2xl font-semibold mb-5">Preparing</h5>
+
+          <p class="text-slate-400 mb-3">
+            The training takes place entirely in <strong>English</strong>, so a
+            sufficient spoken understanding of English is mandatory.
+          </p>
+        </div>
+        <!--END OVERVIEW-->
+
+        <!--START LOGISTICS-->
+        <div class="grid grid-cols-1 mt-16">
+          <h5 class="text-2xl font-semibold mb-5">Logistics</h5>
+
+          <ul>
+            <li class="text-slate-400 mb-3 list-disc">
+              Every session is held synchronously, <strong>live</strong>,
+              including remote sessions. This training does not rely on
+              pre-recorded videos.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Comprehensive course material is provided, serving as a common
+              thread throughout the training. This typically includes numerous
+              slides and starter codebases or repositories for every exercise
+              and lab.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Trainees can ask questions at any time. Sessions alternate between
+              <strong>theory and hands-on labs</strong>, in short intervals
+              ranging from 5 minutes to 1 hour.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Hands-on periods involve <strong>real-world use-cases</strong>,
+              which can be bootstrapped through starter codebases, Git
+              repositories, or online assignment labs. These periods may be
+              completed individually or in sub-groups that change between
+              sessions to encourage pair programming and collaboration.
+            </li>
+
+            <li class="text-slate-400 mb-3 list-disc">
+              Remote sessions are conducted via a Zoom recurring meeting,
+              accessible through a provided link using both the installed app
+              and the web-based, no-install client. Features commonly used
+              include video thumbnails, screensharing, chat, breakout rooms, and
+              potentially quizzes, annotations, and whiteboards.
+            </li>
+          </ul>
+        </div>
+        <!--END LOGISTICS-->
+
+        <!-- START AVAILABLE DATES-->
+        <div class="container relative md:mt-24 mt-16">
+          <div class="grid grid-cols-1 pb-8 text-center">
+            <h3
+              class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold"
+            >
+              Upcoming Sessions
+            </h3>
+
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 mt-8 gap-[30px]">
+              <div
+                class="group border-b-[3px] dark:border-gray-700 hover:border-cute-green-darker-plus-hover dark:hover:border-cute-green-darker-plus-hover duration-500 hover:scale-105 relative shadow dark:shadow-gray-800 rounded-md bg-white dark:bg-slate-900"
+              >
+                <div class="p-6 py-8">
+                  <h6
+                    class="font-bold text-xl uppercase mb-4 text-cute-green-darker-plus"
+                  >
+                    November 8, 2024
+                  </h6>
+
+                  <a
+                    href="https://www.billetweb.fr/concurrency-with-john-sundell"
+                    target="_blank"
+                    class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-cute-green-darker-plus hover:bg-cute-green-darker-plus-hover border-cute-green-darker-plus hover:border-cute-green-darker-plus-hover text-white rounded-md mt-4"
+                    >Book Now</a
+                  >
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- END AVAILABLE DATES -->
+
+        <!-- START NEED CUSTOM TRAINING -->
+        <div class="container relative md:mt-24 mt-16">
+          <div class="md:flex justify-center">
+            <div class="lg:w-2/3 text-center">
+              <h3
+                class="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold mb-6"
+              >
+                Need an In-House / Custom Training?
+              </h3>
+
+              <p class="text-slate-400 max-w-xl mx-auto">
+                If you’d like to get a version of this tailored to your needs,
+                in our office or remotely, let us know what your needs are.
+              </p>
+
+              <div class="mt-8">
+                <div class="text-center subcribe-form">
+                  <div class="mt-6">
+                    <a
+                      target="_blank"
+                      href="https://airtable.com/appud3cU1ufbvcMWB/pag9HJZrgT7GABCn5/form"
+                      class="btn bg-cute-green-darker-plus hover:bg-cute-green-darker-plus-hover border-cute-green-darker-plus hover:border-cute-green-darker-plus-hover text-white rounded-md mt-4"
+                      ><i class="uil uil-envelope"></i> Get in Touch!</a
+                    >
+                  </div>
+                  <!--end form-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END NEED CUSTOM TRAINING -->
+      </div>
+      <!--end container-->
+
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- End Section-->
+
+    <!-- Footer Start -->
+    <footer
+      class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200"
+    >
+      <div class="container">
+        <div class="col-span-12">
+          <div class="py-16 px-0">
+            <div class="grid lg:grid-cols-12 grid-cols-1 gap-8">
+              <div class="lg:col-span-3">
+                <a href="#" class="text-[22px] focus:outline-none">
+                  <img
+                    src="/assets/images/ltc-logo.png"
+                    class="w-full"
+                    alt="La Tech Connection Logo"
+                  />
+                </a>
+              </div>
+              <!--end col-->
+
+              <div class="lg:col-span-3">
+                <h5 class="text-gray-100 font-semibold">La société</h5>
+                <ul class="list-none mt-4">
+                  <li>
+                    <a
+                      href="https://techconnection.notion.site/Manifeste-Tech-Connection-680741db99ab425996da15860736c7a3"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Manifeste</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://techconnection.notion.site/Tech-Connection-Code-of-Conduct-cc41547d5fc24cb6b5cde5b59419d3d5"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Code of
+                      Conduct</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/ZTechConnection"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b"></i>
+                      <i class="uil uil-twitter pr-1"></i>ZTechConnection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/latechconnection/"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b"></i>
+                      <i class="uil uil-linkedin pr-1"></i>La Tech Connection</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--end col-->
+
+              <div class="lg:col-span-3">
+                <h5 class="text-gray-100 font-semibold">Nos événéments</h5>
+                <ul class="list-none mt-4">
+                  <li>
+                    <a
+                      href="https://swiftconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Swift
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://flutterconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Flutter
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://reactconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>React
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://reactnativeconnection.io"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>React Native
+                      Connection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.meetup.com/cocoaheads-paris/"
+                      target="_blank"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>CocoaHeads
+                      Paris</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.meetup.com/react-native-paris-meetup/"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>React Native
+                      Paris</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--end col-->
+
+              <div class="lg:col-span-3">
+                <h5 class="text-gray-100 font-semibold">
+                  Travailler avec nous
+                </h5>
+                <ul class="list-none mt-4">
+                  <li>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdhecV-QQZcgQWl8byKd5UcA71jkYZNLWabRBNHOMPAeYDNmA/viewform?usp=sf_link"
+                      class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      ><i class="uil uil-angle-right-b pr-1"></i>Sponsoring</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end grid-->
+          </div>
+          <!--end col-->
+        </div>
+      </div>
+      <!--end container-->
+
+      <div class="py-[30px] px-0 border-t border-slate-800">
+        <div class="container text-center">
+          <div class="grid md:grid-cols-2 items-center">
+            <div class="ltr:md:text-left rtl:md:text-right text-center">
+              <p class="mb-0">
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                <span class="italic">La</span> Tech Connection
+              </p>
+            </div>
+          </div>
+          <!--end grid-->
+        </div>
+        <!--end container-->
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
