@@ -2219,8 +2219,24 @@ video {
   background-image: url('../assets/logo-cropped.svg');
 }
 
+.bg-\[url\(\'\.\.\/trainings\/accessibility-for-android-with-fanny-demey\/assets\/images\/course\/cta\.jpg\'\)\]{
+  background-image: url('../trainings/accessibility-for-android-with-fanny-demey/assets/images/course/cta.jpg');
+}
+
+.bg-\[url\(\'\.\.\/trainings\/accessibility-for-ios-with-fanny-demey\/assets\/images\/course\/cta\.jpg\'\)\]{
+  background-image: url('../trainings/accessibility-for-ios-with-fanny-demey/assets/images/course/cta.jpg');
+}
+
+.bg-\[url\(\'\.\.\/trainings\/advanced-jetpack-compose-with-joe-birch\/assets\/images\/course\/cta\.jpg\'\)\]{
+  background-image: url('../trainings/advanced-jetpack-compose-with-joe-birch/assets/images/course/cta.jpg');
+}
+
 .bg-\[url\(\'\.\.\/trainings\/assets\/images\/course\/cta\.jpg\'\)\]{
   background-image: url('../trainings/assets/images/course/cta.jpg');
+}
+
+.bg-\[url\(\'\.\.\/trainings\/concurrency-with-kotlin-coroutines-with-joe-birch\/assets\/images\/course\/cta\.jpg\'\)\]{
+  background-image: url('../trainings/concurrency-with-kotlin-coroutines-with-joe-birch/assets/images/course/cta.jpg');
 }
 
 .bg-\[url\(\'\.\.\/trainings\/swiftui-with-john-sundell\/assets\/images\/course\/cta\.jpg\'\)\]{
